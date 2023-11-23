@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "yashika_backend": {
+      "main": "src/yashika_backend/main.mo",
+      "type": "motoko"
+    },
+    "yashika_frontend": {
+      "dependencies": [
+        "yashika_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/yashika_frontend/src/index.html"
+      },
+      "source": [
+        "src/yashika_frontend/assets",
+        "dist/yashika_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
